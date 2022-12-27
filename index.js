@@ -29,7 +29,7 @@ $(document).ready(function () {
       );
       if ((i + 1) % column == 0) box.append('<br>');
     }
-    i = 15;
+    i = 12;
     return 0;
   }
 
