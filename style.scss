@@ -1,0 +1,40 @@
+.box {
+  margin: 0 auto;
+}
+.me {
+  background-size: 800px 400px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin-top: -4px;
+  transition: 0.2s;
+  box-shadow: inset 0px 0px 0px 1px white;
+}
+.pic img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 532px;
+  height: 392px;
+  // border: 3px solid black;
+}
+
+$i: 0;
+// $top : 0;
+// $left: 0;
+@for $i from 0 through 11 {
+  // @if $left == 799.98{
+  // $left : 0;
+  // $top : $top + 133.33;
+  // }
+  .me_#{$i} {
+    height: 133.33px;
+    width: 133.33px;
+    // background-position: -#{$left}px  -#{$top}px;
+  }
+  // $left : $left + 133.33;
+}
+
+.prevent_click {
+  pointer-events: none;
+}
