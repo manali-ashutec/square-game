@@ -2,6 +2,7 @@
   margin: 0 auto;
 }
 .me {
+  // position: relative;
   background-size: 800px 400px;
   background-repeat: no-repeat;
   display: inline-block;
@@ -14,8 +15,10 @@
   top: 0;
   left: 0;
   z-index: -1;
-  width: 700px;
-  height: 384px;
+  padding: 0;
+  margin: 0;
+  // width: 700px;
+  // height: 384px;
   // border: 3px solid black;
 }
 

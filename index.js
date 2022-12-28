@@ -43,8 +43,8 @@ $(document).ready(function () {
 
   function resize() {
     var i;
-    var imgHeight = document.querySelector('.game-img').offsetHeight + 15;
-    var imgWidth = document.querySelector('.game-img').offsetWidth;
+    var imgHeight = document.querySelector('.pic img').offsetHeight + 15;
+    var imgWidth = document.querySelector('.pic img').offsetWidth;
     console.log(imgHeight, imgWidth);
     console.log(document.getElementsByClassName('tile'));
     for (i = 0; i < orginal.length; i++) {
