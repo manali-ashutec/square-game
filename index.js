@@ -2,8 +2,6 @@
 import './style.scss';
 
 $(document).ready(function () {
-  console.log('hiiiii');
-
   var box = $('.box'),
     orginal = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
     temp = orginal,
@@ -43,15 +41,33 @@ $(document).ready(function () {
     });
   }
 
-  console.log(document.querySelectorAll('div[data-bid]'));
-  var i = 0;
-  (function loop() {
-    document.querySelector(`div[data-bid='${i}']`).style.background =
-      'transparent';
-    //   document.querySelector(`div[data-bid='${i}']`).style.border = 'transparent';
-    document.querySelector(`div[data-bid='${i}']`).style.boxShadow = 'none';
-    if (++i < orginal.length) {
-      setTimeout(loop, 2000);
+  function resize() {
+    var i;
+    var imgHeight = document.querySelector('.game-img').offsetHeight + 15;
+    var imgWidth = document.querySelector('.game-img').offsetWidth;
+    console.log(imgHeight, imgWidth);
+    console.log(document.getElementsByClassName('tile'));
+    for (i = 0; i < orginal.length; i++) {
+      document.getElementsByClassName('tile')[i].style.height =
+        imgHeight / 3 + 'px';
+      document.getElementsByClassName('tile')[i].style.width =
+        imgWidth / 4 + 'px';
     }
-  })();
+  }
+  resize();
+  window.onresize = function () {
+    resize();
+  };
+
+  // console.log(document.querySelectorAll('div[data-bid]'));
+  // var i = 0;
+  // (function loop() {
+  //   document.querySelector(`div[data-bid='${i}']`).style.background =
+  //     'transparent';
+  //   //   document.querySelector(`div[data-bid='${i}']`).style.border = 'transparent';
+  //   document.querySelector(`div[data-bid='${i}']`).style.boxShadow = 'none';
+  //   if (++i < orginal.length) {
+  //     setTimeout(loop, 2000);
+  //   }
+  // })();
 });
