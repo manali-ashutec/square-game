@@ -43,10 +43,10 @@ $(document).ready(function () {
 
   function resize() {
     var i;
-    var imgHeight = document.querySelector('.pic').offsetHeight + 15;
-    var imgWidth = document.querySelector('.pic').offsetWidth;
-    console.log(imgHeight, imgWidth);
-    console.log(document.getElementsByClassName('tile'));
+    var imgHeight = document.querySelector('.pic').offsetHeight + 10;
+    var imgWidth = document.querySelector('.pic').offsetWidth - 24;
+    console.log(document.querySelector('.pic'), imgHeight, imgWidth);
+    // console.log(document.getElementsByClassName('tile'));
     for (i = 0; i < orginal.length; i++) {
       document.getElementsByClassName('tile')[i].style.height =
         imgHeight / 3 + 'px';
@@ -54,7 +54,9 @@ $(document).ready(function () {
         imgWidth / 4 + 'px';
     }
   }
-  resize();
+  setTimeout(() => {
+    resize();
+  }, 50);
   window.onresize = function () {
     resize();
   };
