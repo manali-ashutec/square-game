@@ -42,10 +42,10 @@ $(document).ready(function () {
   }
 
   function resize() {
-    var i;
+    var i = 0;
     var imgHeight = document.querySelector('.pic').offsetHeight + 10;
     var imgWidth = document.querySelector('.pic').offsetWidth - 24;
-    console.log(document.querySelector('.pic'), imgHeight, imgWidth);
+    // console.log(document.querySelector('.pic'), imgHeight, imgWidth);
     // console.log(document.getElementsByClassName('tile'));
     for (i = 0; i < orginal.length; i++) {
       document.getElementsByClassName('tile')[i].style.height =
