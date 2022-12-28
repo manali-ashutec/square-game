@@ -1,5 +1,6 @@
 .box {
-  margin: 0 auto;
+  // margin: 0 auto;
+  position: relative;
 }
 .me {
   // position: relative;
@@ -10,9 +11,13 @@
   transition: 0.2s;
   box-shadow: inset 0px 0px 0px 1px white;
 }
-.pic img {
+// .pic {
+// margin-top: 20px;
+// overflow: hidden;
+// }
+.pic {
   position: absolute;
-  top: 0;
+  top: 0px;
   left: 0;
   z-index: -1;
   padding: 0;

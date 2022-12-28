@@ -43,8 +43,8 @@ $(document).ready(function () {
 
   function resize() {
     var i;
-    var imgHeight = document.querySelector('.pic img').offsetHeight + 15;
-    var imgWidth = document.querySelector('.pic img').offsetWidth;
+    var imgHeight = document.querySelector('.pic').offsetHeight + 15;
+    var imgWidth = document.querySelector('.pic').offsetWidth;
     console.log(imgHeight, imgWidth);
     console.log(document.getElementsByClassName('tile'));
     for (i = 0; i < orginal.length; i++) {
